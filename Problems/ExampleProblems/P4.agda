@@ -3,4 +3,4 @@ data Maybe (A : Set) : Set where
  just : A → Maybe A
 
 fromMaybe : {A : Set} → A → Maybe A → A
-frmMaybe = {!!}
+fromMaybe = {!!}
