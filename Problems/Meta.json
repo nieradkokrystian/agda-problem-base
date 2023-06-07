@@ -1,0 +1,9 @@
+{
+  "agdaVersion": "2.6.4",
+  "dependencies": [
+    "LIB1",
+    "LIB2",
+    "LIB3"
+  ]
+}
+
