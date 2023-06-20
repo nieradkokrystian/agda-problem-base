@@ -70,6 +70,3 @@ record Iso (A B : Set) : Set where
 
 listIso : (A B : Set) → Iso A B → Iso (List A) (List B) 
 listIso = {!!}
-
-areIsomorphic : Iso Representation1.Client Representation2.Customer
-areIsomorphic = {!!}
