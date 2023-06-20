@@ -64,7 +64,7 @@ record Iso : Set where
   to : Representation1.Client → Representation2.Customer
   from : Representation2.Customer → Representation1.Client
   leftInv : ∀ x → from (to x) ≡ x
-  right Inv : ∀ x → (to (from x)) ≡ x
+  rightInv : ∀ x → (to (from x)) ≡ x
 
 areIsomorphic : Iso
 areIsomorphic = {!!}

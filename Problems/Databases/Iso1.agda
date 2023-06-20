@@ -58,7 +58,24 @@ record Iso : Set where
   to : Representation1.Item → Representation2.Line
   from : Representation2.Line → Representation1.Item
   leftInv : ∀ x → from (to x) ≡ x
-  right Inv : ∀ x → (to (from x)) ≡ x
+  rightInv : ∀ x → (to (from x)) ≡ x
 
 areIsomorphic : Iso
-areIsomorphic = {!!}
+areIsomorphic = record
+  { to = toFun
+  ; from = fromFun
+  ; leftInv = leftInverse
+  ; rightInv = rightInverse
+  }
+  where
+   toFun : Representation1.Item → Representation2.Line
+   toFun (Representation1.MkItem desc amt) = Representation2.MkLine desc amt
+
+   fromFun : Representation2.Line → Representation1.Item
+   fromFun (Representation2.MkLine info cst) = Representation1.MkItem info cst
+
+   leftInverse : ∀ x → fromFun (toFun x) ≡ x
+   leftInverse (Representation1.MkItem desc amt) = refl
+
+   rightInverse : ∀ x → (toFun (fromFun x)) ≡ x
+   rightInverse (Representation2.MkLine info cst) = refl
