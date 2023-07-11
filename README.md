@@ -1,6 +1,6 @@
-# agda-problem-base
+# Agda Problem Base
 
-This repository contains problems to be solved by LLM (Language Model). It is used by the [agda-gpt-experiment tool](https://github.com/nieradkokrystian/agda-gpt-experiment) as a problem database.
+This repository contains problems to be solved by LLMs (Large Language Models). It is used by the [Agda GPT Experiment tool](https://github.com/nieradkokrystian/agda-gpt-experiment) as a problem database.
 
 All problems are located in the ["Problems" directory](Problems) or its subdirectories. Each problem can have its own metadata, including the Agda compiler version and dependencies.
 
